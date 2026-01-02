@@ -1,7 +1,7 @@
 # PurifyFlat - Flat-File Static Website Kit for PHP
 
-A minimalist, PHP-based, CMS-like no-database (flat-file) website starter kit for quickly building static or semi-dynamic websites.  
-Designed for simplicity, flexibility, and speed — this lightweight structure helps you create and manage a website without the need for any database.
+PurifyFlat is a minimalist, PHP-based, flat-file static website kit designed for building fast, simple, and maintainable websites without any database.
+It provides a CMS-like structure using only files, making it ideal for corporate, landing, and front-end websites.
 
 ---
 
@@ -17,6 +17,7 @@ Designed for simplicity, flexibility, and speed — this lightweight structure h
 - PHP 7.4 or higher recommended
 - Any web server with PHP support (Apache, Nginx, LiteSpeed, etc.)
 - Basic understanding of HTML, CSS, and PHP
+- No database required
 
 ---
 
@@ -29,7 +30,11 @@ Designed for simplicity, flexibility, and speed — this lightweight structure h
 ---
 
 ## 📄 Creating a New Page
+PurifyFlat uses simple PHP files as pages.
+Each page follows the same structure and shares common layout components.
+
 Example: Creating a `partners` page.
+
 
 1. Create a new file named `partners.php` in your project root.  
 2. Paste the following content:
@@ -62,12 +67,24 @@ include_once __DIR__ . '/inc/navbar.php';
 <?php include_once __DIR__ . '/inc/footer.php'; ?>
 ```
 
+## 🎨 Theme Development
+
+PurifyFlat does not enforce a strict theme system.  
+Instead, it provides a **layout-based structure** that allows you to customize or replace core UI components such as the navbar, footer, and page layouts.
+
+Themes are created by **editing or overriding layout files** inside the `/inc/` directory.
+
 ---
 
-## 💎 Sponsors
-**Nywhash**  
-![Nywhash Logo](https://static.nywhash.com/partners/nywhash/nywhash_text_color.png)
+### 📌 Core Layout Files
+The following files control the global layout and can be customized for theming purposes:
 
----
+- `/inc/head.php` – `<head>` section, meta tags, CSS includes  
+- `/inc/navbar.php` – Main navigation bar  
+- `/inc/footer.php` – Footer layout  
+- `/assets/` – CSS, JS, images, icons
 
-© 2025 anefha. All rights reserved under MIT License.
+To create a custom theme, simply modify these files or duplicate them into a new theme structure if desired.
+
+© 2025 Nywhash, Ltd.  
+Released under the MIT License.
