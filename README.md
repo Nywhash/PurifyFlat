@@ -89,5 +89,5 @@ The following files control the global layout and can be customized for theming 
 
 To create a custom theme, simply modify these files or duplicate them into a new theme structure if desired.
 
-© 2025 Nywhash, Ltd.  
+© 2026 Nywhash, Ltd.  
 Released under the MIT License.
