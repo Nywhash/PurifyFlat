@@ -1,5 +1,5 @@
 <?php
-defined('DIR_ACCESS') or header('Location: ' . $cfg_mainurl);
+defined('DIR_ACCESS') or die(header('Location: ' . $cfg_mainurl));
 include_once 'config.php';
 ?>
 <!-- Footer Start -->

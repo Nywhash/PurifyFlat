@@ -1,5 +1,5 @@
 <?php
-defined('DIR_ACCESS') or header('Location: ' . (isset($cfg_mainurl) ? $cfg_mainurl : '/'));
+defined('DIR_ACCESS') or die(header('Location: ' . (isset($cfg_mainurl) ? $cfg_mainurl : '/')));
 include_once 'config.php';
 
 // prevent host header manipulation

@@ -2,7 +2,7 @@
 // Main site URL (including https and www if applicable)
 $cfg_mainurl = 'https://www.example.com'; // Example: https://www.example.com
 
-defined('DIR_ACCESS') or header('Location: ' . $cfg_mainurl);
+defined('DIR_ACCESS') or die(header('Location: ' . $cfg_mainurl));
 
 error_reporting(E_ALL);
 ini_set('display_errors', 0); // 0: Production (no errors shown), 1: Debug mode (show all errors)
