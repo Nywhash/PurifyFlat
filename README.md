@@ -89,5 +89,17 @@ The following files control the global layout and can be customized for theming 
 
 To create a custom theme, simply modify these files or duplicate them into a new theme structure if desired.
 
+## 💎 Premium Themes
+
+If you prefer a ready‑to‑use, professionally designed look for your PurifyFlat website, we offer a growing collection of premium themes.  
+Each theme is built with the same flat‑file philosophy and can be installed in minutes.
+
+👉 **Browse all premium themes at:**  
+[https://www.nywhash.com/themes](https://www.nywhash.com/themes)
+
+---
+
+## 📄 License
+
 © 2026 Nywhash, Ltd.  
 Released under the MIT License.
