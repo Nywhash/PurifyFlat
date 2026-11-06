@@ -75,20 +75,20 @@ include_once __DIR__ . '/inc/navbar.php';
         <h2>Frequently Asked Questions</h2>
         <div class="nf_faq-list">
             <div class="nf_faq-item">
-                <div class="nf_faq-question">Example 1?</div>
-                <div class="nf_faq-answer">Answer 1.</div>
+                <div class="nf_faq-question">How quickly can we get started?</div>
+                <div class="nf_faq-answer">Most projects kick off within 2 to 3 business days after the initial consultation and scope agreement.</div>
             </div>
             <div class="nf_faq-item">
-                <div class="nf_faq-question">Example 2?</div>
-                <div class="nf_faq-answer">Answer 2.</div>
+                <div class="nf_faq-question">Do you offer custom packages for small businesses?</div>
+                <div class="nf_faq-answer">Yes, all of our solutions are tailored to match your current stage, goals, and budget requirements.</div>
             </div>
             <div class="nf_faq-item">
-                <div class="nf_faq-question">Example 3?</div>
-                <div class="nf_faq-answer">Answer 3.</div>
+                <div class="nf_faq-question">What kind of ongoing support is included?</div>
+                <div class="nf_faq-answer">We provide dedicated technical support, regular maintenance updates, and performance monitoring.</div>
             </div>
             <div class="nf_faq-item">
-                <div class="nf_faq-question">Example 4?</div>
-                <div class="nf_faq-answer">Answer 4.</div>
+                <div class="nf_faq-question">Can I upgrade or change my plan later?</div>
+                <div class="nf_faq-answer">Absolutely. You can scale your services up or adjust your plan at any time as your business grows.</div>
             </div>
         </div>
     </section>
