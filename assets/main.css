@@ -1,17 +1,15 @@
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -ms-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    transition: all .3s ease-out;
 }
 html {
 	scroll-behavior: smooth;
 }
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
 }
 

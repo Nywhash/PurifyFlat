@@ -1,4 +1,8 @@
+Options -Indexes
 RewriteEngine On
+
+# block direct access to inc
+RewriteRule ^inc(/|$) - [F,L]
 
 # "/*/" to "/"
 RewriteCond %{REQUEST_FILENAME} !-d

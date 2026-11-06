@@ -15,14 +15,14 @@ include_once __DIR__ . '/inc/navbar.php';
 <!-- Content Start -->
 <main class="nf_main-content nf_container2">
     <section class="nf_hero">
-        <h1>About <?= $cfg_name ?></h1>
-        <p><?= $cfg_name ?> provides reliable and efficient solutions tailored for your business needs.</p>
-        <a href="<?= $cfg_mainurl ?>" class="nf_btn-primary">Learn More</a>
+        <h1>About <?= e($cfg_name) ?></h1>
+        <p><?= e($cfg_name) ?> provides reliable and efficient solutions tailored for your business needs.</p>
+        <a href="<?= e(rtrim($cfg_mainurl, '/')) ?>/" class="nf_btn-primary">Learn More</a>
     </section>
 
     <!-- Features Section -->
     <section class="nf_features">
-        <h2>Why Choose <?= $cfg_name ?>?</h2>
+        <h2>Why Choose <?= e($cfg_name) ?>?</h2>
         <div class="nf_feature-cards">
             <article class="nf_feature-card">
                 <i class="fas fa-shield-alt fa-3x nf_feature-icon"></i>
