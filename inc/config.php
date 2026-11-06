@@ -2,10 +2,23 @@
 // Main site URL (including https and www if applicable)
 $cfg_mainurl = 'https://www.example.com'; // Example: https://www.example.com
 
-defined('DIR_ACCESS') or die(header('Location: ' . $cfg_mainurl));
+if (!defined('DIR_ACCESS')) {
+    header('Location: ' . $cfg_mainurl, true, 302);
+    exit();
+}
 
 error_reporting(E_ALL);
 ini_set('display_errors', 0); // 0: Production (no errors shown), 1: Debug mode (show all errors)
+
+if (!function_exists('e')) {
+    function e($value)
+    {
+        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+    }
+}
+
+// Site language
+$cfg_lang = 'en'; // Example: en, tr
 
 // Should the site be crawled by search engines?
 $cfg_robots = true; // true = allow indexing, false = disallow
@@ -28,3 +41,4 @@ $cfg_legalname = 'Example, Inc.'; // Example: My Company, Inc.
 
 // Google Analytics ID (e.g., G-XXXXXXXXXX)
 $cfg_googleanalytics = ''; // Example: G-1234567890
+
