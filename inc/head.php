@@ -9,6 +9,10 @@ $page_title = isset($title) && $title !== '' ? $title : $cfg_name;
 $page_desc = isset($desc) && $desc !== '' ? $desc : $cfg_name;
 $page_url = isset($url) && $url !== '' ? $url : $cfg_mainurl;
 $base_url = rtrim($cfg_mainurl, '/');
+
+if (!headers_sent()) {
+    header('Content-Type: text/html; charset=UTF-8');
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?= e($cfg_lang ?? 'en') ?>">
