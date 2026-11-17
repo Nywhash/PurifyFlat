@@ -5,7 +5,7 @@ define('DIR_ACCESS', true); // allow access for guests
 // include the configuration file
 include_once __DIR__ . '/inc/config.php';
 
-$url = rtrim($cfg_mainurl, '/') . '/'; // Example: /about (Empty for the homepage)
+$url = $cfg_baseurl . '/';
 
 // Set the title and description for the homepage
 $title = $cfg_name . " - Homepage";
@@ -25,7 +25,7 @@ include_once __DIR__ . '/inc/navbar.php';
     <section class="nf_hero">
         <h1>Welcome to <?= e($cfg_name) ?></h1>
         <p><?= e($cfg_name) ?> provides reliable and efficient solutions tailored for your business needs.</p>
-        <a href="<?= e(rtrim($cfg_mainurl, '/')) ?>/about" class="nf_btn-primary">Learn More</a>
+        <a href="<?= e($cfg_baseurl) ?>/about" class="nf_btn-primary">Learn More</a>
     </section>
 
     <!-- Features Section -->

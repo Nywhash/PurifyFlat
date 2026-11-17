@@ -1,14 +1,28 @@
-Options -Indexes
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
 ErrorDocument 404 /404.php
-RewriteEngine On
 
-# block direct access to inc
-RewriteRule ^inc(/|$) - [F,L]
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
 
-# "/*/" to "/"
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [L,R=301]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-# remove .php
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+    # block dotfiles
+    RewriteRule ^\.(?!well-known/) - [F,L]
+
+    # block direct access to inc
+    RewriteRule ^inc(/|$) - [F,L]
+
+    # "/*/" to "/"
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+    # remove .php
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+</IfModule>

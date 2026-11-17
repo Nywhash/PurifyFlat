@@ -1,6 +1,7 @@
 <?php
 // Main site URL (including https and www if applicable)
 $cfg_mainurl = 'https://www.example.com'; // Example: https://www.example.com
+$cfg_baseurl = rtrim($cfg_mainurl, '/');
 
 if (!defined('DIR_ACCESS')) {
     header('Location: ' . $cfg_mainurl, true, 302);
@@ -23,12 +24,9 @@ $cfg_lang = 'en'; // Example: en, tr
 // Should the site be crawled by search engines?
 $cfg_robots = true; // true = allow indexing, false = disallow
 
-// Your domain name (without www and https, just the domain)
-$cfg_domain = 'example.com'; // Example: example.com
-
-// Logo link (URL to your logo image)
-$cfg_logolink = 'https://www.example.com/logo.png'; // Example: https://www.example.com/logo.png
-$cfg_favicon = 'https://www.example.com/favicon.ico'; // Example: https://www.example.com/favicon.ico
+// Logo link (leave empty to use the site name)
+$cfg_logolink = ''; // Example: https://www.example.com/logo.png
+$cfg_favicon = ''; // Example: https://www.example.com/favicon.ico
 
 // Support link (can be an email address or a support URL)
 $cfg_support = 'mailto:support@example.com'; // Example: mailto:support@example.com or https://example.com/support

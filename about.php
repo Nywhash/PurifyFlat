@@ -3,7 +3,7 @@
 define('DIR_ACCESS', true);
 include_once __DIR__ . '/inc/config.php';
 
-$url = rtrim($cfg_mainurl, '/') . '/about';
+$url = $cfg_baseurl . '/about';
 $title = $cfg_name . " - About";
 $desc = "Welcome to " . $cfg_name . ", your trusted partner in innovative business solutions.";
 
@@ -17,7 +17,7 @@ include_once __DIR__ . '/inc/navbar.php';
     <section class="nf_hero">
         <h1>About <?= e($cfg_name) ?></h1>
         <p>We help organizations build fast, reliable, and scalable digital experiences with a focus on simplicity and long-term value.</p>
-        <a href="<?= e(rtrim($cfg_mainurl, '/')) ?>/contact" class="nf_btn-primary">Get in Touch</a>
+        <a href="<?= e($cfg_baseurl) ?>/contact" class="nf_btn-primary">Get in Touch</a>
     </section>
 
     <!-- Stats Section -->

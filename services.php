@@ -3,7 +3,7 @@
 define('DIR_ACCESS', true);
 include_once __DIR__ . '/inc/config.php';
 
-$url = rtrim($cfg_mainurl, '/') . '/services';
+$url = $cfg_baseurl . '/services';
 $title = $cfg_name . " - Services";
 $desc = "Explore the professional services and custom solutions offered by " . $cfg_name . ".";
 
@@ -17,7 +17,7 @@ include_once __DIR__ . '/inc/navbar.php';
     <section class="nf_hero">
         <h1>Our Services</h1>
         <p>Comprehensive, high-performance solutions designed to help your business grow and operate efficiently.</p>
-        <a href="<?= e(rtrim($cfg_mainurl, '/')) ?>/contact" class="nf_btn-primary">Request a Quote</a>
+        <a href="<?= e($cfg_baseurl) ?>/contact" class="nf_btn-primary">Request a Quote</a>
     </section>
 
     <!-- Services Grid -->
@@ -80,7 +80,7 @@ include_once __DIR__ . '/inc/navbar.php';
     <section class="nf_cta-box">
         <h2>Ready to Start Your Next Project?</h2>
         <p>Tell us about your goals and let’s build the right solution together.</p>
-        <a href="<?= e(rtrim($cfg_mainurl, '/')) ?>/contact" class="nf_btn-primary">Contact Us</a>
+        <a href="<?= e($cfg_baseurl) ?>/contact" class="nf_btn-primary">Contact Us</a>
     </section>
 </main>
 <!-- Content End -->

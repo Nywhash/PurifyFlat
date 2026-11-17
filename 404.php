@@ -9,7 +9,7 @@ if (!headers_sent()) {
     http_response_code(404);
 }
 
-$url = rtrim($cfg_mainurl, '/') . '/404';
+$url = $cfg_baseurl . '/404';
 $title = $cfg_name . " - 404 Not Found";
 $desc = "The page you are looking for could not be found.";
 
@@ -22,7 +22,7 @@ include_once __DIR__ . '/inc/navbar.php';
     <section class="nf_hero">
         <h1>404 &ndash; Page Not Found</h1>
         <p>The page you are looking for might have been moved, renamed, or no longer exists.</p>
-        <a href="<?= e(rtrim($cfg_mainurl, '/')) ?>/" class="nf_btn-primary">Back to Homepage</a>
+        <a href="<?= e($cfg_baseurl) ?>/" class="nf_btn-primary">Back to Homepage</a>
     </section>
 </main>
 <!-- Content End -->

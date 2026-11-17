@@ -8,7 +8,7 @@ if (!defined('DIR_ACCESS')) {
 $page_title = isset($title) && $title !== '' ? $title : $cfg_name;
 $page_desc = isset($desc) && $desc !== '' ? $desc : $cfg_name;
 $page_url = isset($url) && $url !== '' ? $url : $cfg_mainurl;
-$base_url = rtrim($cfg_mainurl, '/');
+$base_url = $cfg_baseurl;
 
 if (!headers_sent()) {
     header('Content-Type: text/html; charset=UTF-8');
@@ -30,7 +30,7 @@ if (!headers_sent()) {
     <meta name="robots"
         content="<?= (!empty($cfg_robots) && $cfg_robots === true) ? 'index, follow' : 'noindex, nofollow' ?>" />
     <meta name="description" content="<?= e($page_desc) ?>" />
-    <meta name="theme-color" content="#d700ff" />
+    <meta name="theme-color" content="#d700fe" />
     <link rel="canonical" href="<?= e($page_url) ?>" />
 
     <!-- Open Graph -->
@@ -39,9 +39,11 @@ if (!headers_sent()) {
     <meta property="og:description" content="<?= e($page_desc) ?>" />
     <meta property="og:url" content="<?= e($page_url) ?>" />
     <meta property="og:site_name" content="<?= e($cfg_name) ?>" />
-    <meta property="og:image" content="<?= e($cfg_logolink) ?>" />
-    <meta property="og:image:secure_url" content="<?= e($cfg_logolink) ?>" />
-    <meta property="og:image:alt" content="<?= e($cfg_name) ?> Logo" />
+    <?php if (!empty($cfg_logolink)): ?>
+        <meta property="og:image" content="<?= e($cfg_logolink) ?>" />
+        <meta property="og:image:secure_url" content="<?= e($cfg_logolink) ?>" />
+        <meta property="og:image:alt" content="<?= e($cfg_name) ?> Logo" />
+    <?php endif; ?>
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?= e($base_url) ?>/assets/main.css" />

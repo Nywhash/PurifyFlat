@@ -329,11 +329,8 @@ body {
     padding: 20px 0 60px;
 }
 
-.nf_contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 50px;
-    align-items: start;
+.nf_contact-info {
+    max-width: 720px;
 }
 
 .nf_contact-info h2 {
@@ -387,64 +384,6 @@ body {
 .nf_contact-card a:hover {
     color: #d700fe;
     text-decoration: underline;
-}
-
-.nf_contact-form-wrap {
-    background: #fff;
-    padding: 36px;
-    border-radius: 12px;
-    border: 1px solid #eaeaea;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.nf_form-group {
-    margin-bottom: 20px;
-}
-
-.nf_form-group label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.nf_form-group input,
-.nf_form-group textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 0.95rem;
-    color: #111;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.nf_form-group input:focus,
-.nf_form-group textarea:focus {
-    outline: none;
-    border-color: #d700fe;
-    box-shadow: 0 0 0 3px rgba(215, 0, 254, 0.12);
-}
-
-.nf_btn-submit {
-    display: inline-block;
-    width: 100%;
-    background: #111;
-    color: #fff;
-    border: none;
-    padding: 14px 24px;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-.nf_btn-submit:hover {
-    background: #d700fe;
 }
 
 .nf_faq {
@@ -536,14 +475,6 @@ body {
 
     .nf_stats {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .nf_contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nf_contact-form-wrap {
-        padding: 24px 20px;
     }
 
     .nf_feature-cards {

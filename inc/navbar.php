@@ -6,12 +6,16 @@ if (!defined('DIR_ACCESS')) {
 }
 
 $current_page = basename($_SERVER['PHP_SELF'] ?? '');
-$base_url = rtrim($cfg_mainurl, '/');
+$base_url = $cfg_baseurl;
 ?>
 <nav class="nf_navbar">
     <div class="nf_container">
         <a href="<?= e($base_url) ?>/" class="nf_logo">
-            <img src="<?= e($cfg_logolink) ?>" alt="<?= e($cfg_name) ?> Logo" />
+            <?php if (!empty($cfg_logolink)): ?>
+                <img src="<?= e($cfg_logolink) ?>" alt="<?= e($cfg_name) ?> Logo" />
+            <?php else: ?>
+                <?= e($cfg_name) ?>
+            <?php endif; ?>
         </a>
 
         <ul class="nf_nav-links">
