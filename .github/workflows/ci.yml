@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4']
+        php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
 
     steps:
       - uses: actions/checkout@v4
@@ -30,8 +30,13 @@ jobs:
 
       - name: Smoke test
         run: |
-          php -S 127.0.0.1:8080 > /tmp/php-server.log 2>&1 &
+          rm -f /tmp/php-errors.log
+          php -d log_errors=1 -d error_log=/tmp/php-errors.log -S 127.0.0.1:8080 > /tmp/php-server.log 2>&1 &
           sleep 1
           curl -fsS http://127.0.0.1:8080/ -o /tmp/home.html
           grep -q '<title>' /tmp/home.html
           kill $!
+          if [ -s /tmp/php-errors.log ]; then
+            cat /tmp/php-errors.log
+            exit 1
+          fi
