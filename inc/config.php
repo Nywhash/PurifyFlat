@@ -13,7 +13,7 @@ ini_set('display_errors', 0); // 0: Production (no errors shown), 1: Debug mode 
 if (!function_exists('e')) {
     function e($value)
     {
-        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+        return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     }
 }
 
